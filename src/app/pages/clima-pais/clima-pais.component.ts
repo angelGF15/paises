@@ -1,32 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalClimaComponent } from '../../modal-clima/modal-clima.component';
-
+import { PaisService, Pais } from '../../services/pais.service';
 @Component({
   selector: 'app-clima-pais',
   templateUrl: './clima-pais.component.html',
   styleUrl: './clima-pais.component.css'
 })
 export class ClimaPaisComponent implements OnInit {
-  paises: any[] = [];
 
-  constructor(private http: HttpClient, private dialog: MatDialog) {}
+  paises: Pais[] = [];
+  cargando = true; 
+
+  constructor(private paisService: PaisService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
-    const centroAmerica = ['Honduras', 'Guatemala', 'El Salvador', 'Costa Rica', 'Nicaragua'];
-
-    centroAmerica.forEach(pais => {
-      this.http.get(`https://geocoding-api.open-meteo.com/v1/search?name=${pais}`)
-        .subscribe((res: any) => {
-          const p = res.results[0];
-          this.paises.push({
-            nombre: p.name,
-            country: p.country,
-            lat: p.latitude,
-            lon: p.longitude
-          });
-        });
+    this.paisService.obtenerPaisesCentroamerica().subscribe({
+      next: (paises) => {
+        this.paises = paises;
+        this.cargando = false;
+      },
+      error: (error) => {
+        console.error('Error al cargar países:', error);
+        this.cargando = false;
+      }
     });
   }
 
