@@ -1,0 +1,8 @@
+<div class="grid-paises">
+  <app-pais
+    *ngFor="let p of paises"
+    [pais]="p"
+    [mostrarDetalle]="true"
+    (verDetalle)="mostrarDetalle($event)">
+  </app-pais>
+</div>

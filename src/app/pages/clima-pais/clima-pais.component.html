@@ -1,0 +1,10 @@
+<div class="grid-paises">
+  <app-pais
+    *ngFor="let p of paises"
+    [pais]="p"
+    [mostrarClima]="true"
+    (verClima)="abrirClima($event)">
+  </app-pais>
+</div>
+
+

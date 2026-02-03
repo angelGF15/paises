@@ -1,0 +1,43 @@
+<div class="modal-detalle">
+  <div class="modal-header">
+    <h2 class="modal-title">Detalle de {{ data.nombre }}</h2>
+  </div>
+
+  <div class="modal-body">
+    <div class="info-grid">
+      <div class="info-item">
+        <span class="info-icon">🌍</span>
+        <div class="info-content">
+          <span class="info-label">País</span>
+          <span class="info-value">{{ data.country }}</span>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <span class="info-icon">📍</span>
+        <div class="info-content">
+          <span class="info-label">Latitud</span>
+          <span class="info-value">{{ data.lat }}</span>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <span class="info-icon">📍</span>
+        <div class="info-content">
+          <span class="info-label">Longitud</span>
+          <span class="info-value">{{ data.lon }}</span>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <span class="info-icon">🕐</span>
+        <div class="info-content">
+          <span class="info-label">Zona horaria</span>
+          <span class="info-value">{{ data.timezone }}</span>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+</div>

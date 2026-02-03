@@ -1,0 +1,38 @@
+.tabs-container {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(180deg, #1e3a8a 0%, #3b82f6 100%);
+  border-radius: 0;
+  box-shadow: none;
+  overflow-x: hidden; 
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-content {
+  flex: 1;
+  padding: 40px; 
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  border-top: 3px solid #3b82f6;
+  border-radius: 0;
+  position: relative;
+  min-height: calc(100vh - 60px);
+  overflow-x: hidden; 
+  box-sizing: border-box; 
+}
+
+.tab-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #3b82f6,
+    transparent
+  );
+}

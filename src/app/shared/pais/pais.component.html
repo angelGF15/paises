@@ -1,0 +1,20 @@
+<div class="pais-card">
+  <div class="pais-card__content">
+    <div class="pais-card__header">
+      <h3 class="pais-card__title">{{ pais.nombre }}</h3>
+      <p class="pais-card__subtitle">{{ pais.country }}</p>
+    </div>
+
+    <div class="pais-card__actions">
+      <button #btnClima *ngIf="mostrarClima" class="btn btn--primary" (click)="clima(btnClima)">
+        <span class="btn__icon">🌤️</span>
+        <span class="btn__text">Ver clima</span>
+      </button>
+
+      <button #btnDetalle *ngIf="mostrarDetalle" class="btn btn--secondary" (click)="detalle(btnDetalle)">
+       
+        <span class="btn__text">Ver detalle</span>
+      </button>
+    </div>
+  </div>
+</div>

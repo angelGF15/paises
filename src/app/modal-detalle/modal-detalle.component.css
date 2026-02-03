@@ -1,0 +1,126 @@
+.modal-detalle {
+  padding: 10px 5px 20px;
+  min-width: 400px;
+}
+
+/* HEADER */
+.modal-header {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  margin-bottom: 35px;
+}
+
+.modal-title {
+  color: #1e3a8a;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+/* BODY */
+.modal-body {
+  padding: 0 0 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ITEMS DE INFO */
+.info-item {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  color: white;
+  padding: 22px 26px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border-left: none;
+  gap: 0;
+}
+
+.info-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 10px 25px rgba(30, 58, 138, 0.25);
+}
+
+.info-item:last-child {
+  margin-bottom: 8px;
+}
+/* CONTENIDO DEL ITEM */
+.info-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.info-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.info-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: right;
+}
+
+/* ICONO */
+.info-icon {
+  font-size: 24px;
+  min-width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: none;
+  margin-right: 16px;
+}
+
+/* GRID - ya no se usa en columnas, ahora es vertical */
+.info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+  .modal-detalle {
+    min-width: 300px;
+  }
+  
+  .info-item {
+    padding: 18px 20px;
+  }
+  
+  .info-label {
+    font-size: 14px;
+  }
+  
+  .info-value {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-detalle {
+    min-width: 450px;
+  }
+}

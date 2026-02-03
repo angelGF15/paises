@@ -1,0 +1,33 @@
+<div class="modal-clima">
+
+  <h2 class="modal-clima__title">
+    🌤️ Clima actual en {{ data.nombre }}
+  </h2>
+
+  <div *ngIf="clima; else cargando" class="modal-clima__body">
+
+    <div class="clima-item">
+      <span class="label">Temperatura</span>
+      <span class="valor">{{ clima.temperature }} °C</span>
+    </div>
+
+    <div class="clima-item">
+      <span class="label">Viento</span>
+      <span class="valor">{{ clima.windspeed }} km/h</span>
+    </div>
+
+    <div class="clima-item">
+      <span class="label">Dirección</span>
+      <span class="valor">{{ clima.winddirection }}°</span>
+    </div>
+
+  </div>
+
+  <ng-template #cargando>
+    <div class="cargando">
+      <div class="spinner"></div>
+      <p>Cargando clima...</p>
+    </div>
+  </ng-template>
+
+</div>
