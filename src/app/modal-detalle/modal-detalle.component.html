@@ -3,7 +3,7 @@
     <h2 class="modal-title">Detalle de {{ data.nombre }}</h2>
   </div>
 
-  <div class="modal-body">
+  <div *ngIf="!cargando; else cargandoTemplate" class="modal-body">
     <div class="info-grid">
       <div class="info-item">
         <span class="info-icon">🌍</span>
@@ -36,8 +36,13 @@
           <span class="info-value">{{ data.timezone }}</span>
         </div>
       </div>
-
-      
     </div>
   </div>
+
+  <ng-template #cargandoTemplate>
+    <div class="cargando">
+      <div class="spinner"></div>
+      <p>Cargando detalle...</p>
+    </div>
+  </ng-template>
 </div>

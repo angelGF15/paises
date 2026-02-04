@@ -5,6 +5,10 @@
       <p class="pais-card__subtitle">{{ pais.country }}</p>
     </div>
 
+    <div class="pais-card__imagen">
+      <img *ngIf="pais.bandera" [src]="pais.bandera" [alt]="pais.nombre" class="pais-flag">
+    </div>
+
     <div class="pais-card__actions">
       <button #btnAccion *ngIf="mostrarBoton" class="btn btn--primary" (click)="accion(btnAccion)">
         <span class="btn__icon">{{ iconoBoton }}</span>
