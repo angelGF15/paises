@@ -6,15 +6,10 @@
     </div>
 
     <div class="pais-card__actions">
-      <button #btnClima *ngIf="mostrarClima" class="btn btn--primary" (click)="clima(btnClima)">
-        <span class="btn__icon">🌤️</span>
-        <span class="btn__text">Ver clima</span>
-      </button>
-
-      <button #btnDetalle *ngIf="mostrarDetalle" class="btn btn--primary" (click)="detalle(btnDetalle)">
-        <span class="btn__icon"> 📋</span>
-        <span class="btn__text">Ver detalle</span>
-      </button>
+      <button #btnAccion *ngIf="mostrarBoton" class="btn btn--primary" (click)="accion(btnAccion)">
+        <span class="btn__icon">{{ iconoBoton }}</span>
+        <span class="btn__text">{{ etiquetaBoton }}</span>
+      </button>     
     </div>
   </div>
 </div>

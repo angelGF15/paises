@@ -4,12 +4,13 @@
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
   color: white;
   width: 100%;
-  min-height: 260px;
-  padding: 28px;
+  max-width: 720px; /* nuevo: aumenta el ancho máximo */
+  min-height: 420px; /* nuevo: hace la card más alta */
+  padding: 36px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-sizing: border-box;
   position: relative; 
-}
+  }
 
 .pais-card:hover {
   transform: translateY(-6px);
@@ -50,7 +51,8 @@
 .pais-card__actions {
   display: flex;
   gap: 12px;
-  margin-top: auto;
+ 
+  margin-top: 28px; 
 }
 
 

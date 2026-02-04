@@ -14,19 +14,22 @@ export class PaisComponent {
   @Input() mostrarClima: boolean = false;
   @Input() mostrarDetalle: boolean = false;
 
-  @Output() verClima = new EventEmitter<any>();
-  @Output() verDetalle = new EventEmitter<any>();
+  @Output() verAccion = new EventEmitter<any>();
 
+  get mostrarBoton(): boolean {
+    return this.mostrarClima || this.mostrarDetalle;
+  }
+
+  get etiquetaBoton(): string {
+    return this.mostrarClima ? 'Ver Clima' : 'Ver Detalle';
+  }
   
+  get iconoBoton(): string {
+    return this.mostrarClima ? '🌤️' : '📋';
+  }
 
- clima(boton: HTMLButtonElement) {
-  boton.blur();              
-  this.verClima.emit(this.pais);
-}
-
-detalle(boton: HTMLButtonElement) {
-  boton.blur();              
-  this.verDetalle.emit(this.pais);
-}
-
+  accion(boton: HTMLButtonElement) {
+    boton.blur();
+    this.verAccion.emit(this.pais);
+  }
 }
