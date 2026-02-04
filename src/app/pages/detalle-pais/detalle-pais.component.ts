@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ModalDetalleComponent } from '../../modal-detalle/modal-detalle.component';
+import { ModalDetalleComponent } from '../../shared/modal-detalle/modal-detalle.component';
 import { PaisService, Pais } from '../../services/pais.service';
 
 @Component({

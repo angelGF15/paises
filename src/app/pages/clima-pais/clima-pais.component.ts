@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ModalClimaComponent } from '../../modal-clima/modal-clima.component';
+import { ModalClimaComponent } from '../../shared/modal-clima/modal-clima.component';
 import { PaisService, Pais } from '../../services/pais.service';
 @Component({
   selector: 'app-clima-pais',

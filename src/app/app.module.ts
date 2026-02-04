@@ -9,10 +9,10 @@ import { DetallePaisComponent } from './pages/detalle-pais/detalle-pais.componen
 import { PaisComponent } from './shared/pais/pais.component';
 import { NavbardComponent } from './shared/navbard/navbard.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { ModalClimaComponent } from './modal-clima/modal-clima.component';
+import { ModalClimaComponent } from './shared/modal-clima/modal-clima.component';
 
 import { provideHttpClient, withFetch } from '@angular/common/http';
-import { ModalDetalleComponent } from './modal-detalle/modal-detalle.component';
+import { ModalDetalleComponent } from './shared/modal-detalle/modal-detalle.component';
 
 @NgModule({
   declarations: [
